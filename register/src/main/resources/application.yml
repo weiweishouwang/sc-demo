@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: eureka
+
+server:
+  port: 8761
+
+management:
+  server:
+    port: 28761
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+  endpoints:
+    enabled-by-default: false
+    web:
+      exposure:
+        include: '*'
+      base-path: /healthcheck
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: false
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+logging:
+  config: classpath:log4j2.xml

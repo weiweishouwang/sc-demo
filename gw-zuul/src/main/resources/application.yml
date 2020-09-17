@@ -1,0 +1,53 @@
+spring:
+  application:
+    name: zuul
+
+server:
+  port: 8080
+
+management:
+  server:
+    port: 28080
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+  endpoints:
+    enabled-by-default: false
+    web:
+      exposure:
+        include: '*'
+      base-path: /healthcheck
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+    registry-fetch-interval-seconds: 5
+
+logging:
+  config: classpath:log4j2.xml
+
+zuul:
+  semaphore:
+    max-semaphores: 100
+  routes:
+    user:
+      path: /user/**
+      service-id: user-service
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 120000
+
+ribbon:
+  connectTimeout: 2000
+  readTimeout: 6000
+  serverListRefreshInterval: 5000

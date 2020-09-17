@@ -1,0 +1,10 @@
+rootProject.name = 'sc-demo'
+
+include 'register'
+include 'gw-zuul'
+include 'gw-scgw'
+include 'commons'
+include 'user-service'
+include 'user-contract'
+include 'user-client'
+

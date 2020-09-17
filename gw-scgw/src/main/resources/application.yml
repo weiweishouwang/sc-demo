@@ -1,0 +1,61 @@
+spring:
+  application:
+    name: scgw
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+      - id: user
+        uri: lb://user-service
+        order: 0
+        predicates:
+        - Path=/user/**
+        filters:
+        - StripPrefix=1
+
+server:
+  port: 9090
+
+management:
+  server:
+    port: 29090
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+  endpoints:
+    enabled-by-default: false
+    web:
+      exposure:
+        include: '*'
+      base-path: /healthcheck
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+    registry-fetch-interval-seconds: 5
+
+logging:
+  config: classpath:log4j2.xml
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 120000
+
+ribbon:
+  connectTimeout: 2000
+  readTimeout: 6000
+  serverListRefreshInterval: 5000
+
+
