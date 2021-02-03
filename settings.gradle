@@ -7,4 +7,5 @@ include 'commons'
 include 'user-service'
 include 'user-contract'
 include 'user-client'
-
+include 'common-contract'
+include 'base-service-client'
