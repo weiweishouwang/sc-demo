@@ -1,0 +1,46 @@
+2021-01-29 13:46:07,144 ERROR [UPDATE-DOMAIN] Exception while taking item from LinkedBlockingDeque.
+
+2021-01-29 14:16:48,493 INFO DEFAULT_GROUP@@scgw {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.8.100:9090:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-29 14:16:48,498 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@scgw, ips: 192.168.8.100:9090_true,
+
+2021-01-29 18:47:09,586 INFO {POS} {IP-DISABLED} valid: 192.168.8.100:9090@DEFAULT@DEFAULT_GROUP@@scgw, region: unknown, msg: client timeout after 15000, last beat: 1611913439457
+
+2021-01-29 18:47:09,801 INFO DEFAULT_GROUP@@scgw {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.8.100:9090:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-01-29 18:47:09,801 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@scgw, ips: 
+
+2021-01-29 18:47:11,911 INFO DEFAULT_GROUP@@scgw {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.8.100:9090:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-29 18:47:11,911 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@scgw, ips: 192.168.8.100:9090_true,
+
+2021-01-29 18:55:59,045 INFO {POS} {IP-DISABLED} valid: 192.168.8.100:9090@DEFAULT@DEFAULT_GROUP@@scgw, region: unknown, msg: client timeout after 15000, last beat: 1611917276971
+
+2021-01-29 18:55:59,053 INFO DEFAULT_GROUP@@scgw {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.8.100:9090:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-01-29 18:55:59,053 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@scgw, ips: 
+
+2021-01-29 18:56:00,467 INFO DEFAULT_GROUP@@scgw {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.8.100:9090:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-29 18:56:00,468 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@scgw, ips: 192.168.8.100:9090_true,
+
+2021-01-29 19:49:08,162 INFO {POS} {IP-DISABLED} valid: 192.168.8.100:9090@DEFAULT@DEFAULT_GROUP@@scgw, region: unknown, msg: client timeout after 15000, last beat: 1611919729576
+
+2021-01-29 19:49:08,173 INFO DEFAULT_GROUP@@scgw {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.8.100:9090:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-01-29 19:49:08,173 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@scgw, ips: 
+
+2021-01-29 19:49:10,186 INFO DEFAULT_GROUP@@scgw {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.8.100:9090:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-29 19:49:10,186 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@scgw, ips: 192.168.8.100:9090_true,
+
+2021-01-29 20:23:20,036 INFO {POS} {IP-DISABLED} valid: 192.168.8.100:9090@DEFAULT@DEFAULT_GROUP@@scgw, region: unknown, msg: client timeout after 15000, last beat: 1611921385213
+
+2021-01-29 20:23:20,044 INFO DEFAULT_GROUP@@scgw {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.8.100:9090:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-01-29 20:23:20,044 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@scgw, ips: 
+
+2021-01-29 20:23:21,771 INFO DEFAULT_GROUP@@scgw {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.8.100:9090:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-01-29 20:23:21,771 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@scgw, ips: 192.168.8.100:9090_true,
+

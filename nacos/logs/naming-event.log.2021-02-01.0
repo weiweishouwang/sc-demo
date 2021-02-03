@@ -1,0 +1,20 @@
+2021-02-01 22:11:02,270 INFO {POS} {IP-DISABLED} valid: 192.168.8.100:9090@DEFAULT@DEFAULT_GROUP@@scgw, region: unknown, msg: client timeout after 15000, last beat: 1612186604193
+
+2021-02-01 22:11:02,287 INFO DEFAULT_GROUP@@scgw {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.8.100:9090:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-02-01 22:11:02,288 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@scgw, ips: 
+
+2021-02-01 22:11:02,484 INFO DEFAULT_GROUP@@scgw {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.8.100:9090:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-02-01 22:11:02,484 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@scgw, ips: 192.168.8.100:9090_true,
+
+2021-02-01 23:42:38,296 INFO {POS} {IP-DISABLED} valid: 192.168.8.100:9090@DEFAULT@DEFAULT_GROUP@@scgw, region: unknown, msg: client timeout after 15000, last beat: 1612188707554
+
+2021-02-01 23:42:38,304 INFO DEFAULT_GROUP@@scgw {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.8.100:9090:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-02-01 23:42:38,304 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@scgw, ips: 
+
+2021-02-01 23:42:38,704 INFO DEFAULT_GROUP@@scgw {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.8.100:9090:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-02-01 23:42:38,704 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@scgw, ips: 192.168.8.100:9090_true,
+

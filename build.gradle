@@ -1,28 +1,16 @@
 buildscript {
     ext {
-        springBootVersion = '2.3.2.RELEASE'
-        springCloudVersion = 'Hoxton.SR7'
-        springBootManagementVersion = '1.0.9.RELEASE'
-        mavenGradleAuthVersion = '2.0.1'
-        mybatisPlusBootStarterVersion = '3.3.1'
-        hutoolVersion = '5.2.4'
+        springBootVersion = '2.2.13.RELEASE'
+        springCloudVersion = 'Hoxton.SR8'
+        springCloudAlibabaVersion = '2.2.1.RELEASE'
+        springBootManagementVersion = '1.0.11.RELEASE'
 
-        if (project.hasProperty('profile')) {
-            profile = "${profile}"
-        } else {
-            profile = 'pdt'
-        }
-
-        if ('pdt' == profile) {
-            versionType = 'RELEASE'
-            repositoryUrl = 'http://aliyun.com'
-        } else {
-            versionType = 'SNAPSHOT'
-            repositoryUrl = 'http://aliyun.com'
-        }
+        mybatisPlusBootStarterVersion = '3.4.2'
+        hutoolVersion = '5.5.7'
     }
 
     repositories {
+        mavenLocal()
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         mavenCentral()
     }
@@ -30,40 +18,41 @@ buildscript {
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
         classpath("io.spring.gradle:dependency-management-plugin:${springBootManagementVersion}")
-        classpath("org.hibernate.build.gradle:gradle-maven-publish-auth:${mavenGradleAuthVersion}")
+        //classpath("org.hibernate.build.gradle:gradle-maven-publish-auth:${mavenGradleAuthVersion}")
     }
 }
 
 allprojects {
     group "com.zhw.sc"
     version "1.0.0"
-}
-
-subprojects {
+    
     apply plugin: 'java'
     apply plugin: 'idea'
-    apply plugin: 'maven'
-    apply plugin: 'maven-publish'
-    apply plugin: 'maven-publish-auth'
     apply plugin: 'io.spring.dependency-management'
 
     [compileJava,compileTestJava]*.options*.encoding = 'UTF-8'
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
 
-    repositories {
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
-        mavenCentral()
+    configurations {
+        all*.exclude group: "org.springframework.boot", module: "spring-boot-starter-logging"
+        all*.exclude group: "org.slf4j", module: "slf4j-log4j12"
+        all*.exclude group: "org.slf4j", module: "slf4j-jdk14"
+        all*.exclude group: "log4j", module: "log4j"
     }
 
-    configurations {
-        all*.exclude group: 'org.springframework.boot', module:'spring-boot-starter-logging'
+    repositories {
+        mavenLocal()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        mavenCentral()
     }
 
     dependencyManagement {
         imports { mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootVersion}") }
         imports { mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}" }
+        imports { mavenBom "com.alibaba.cloud:spring-cloud-alibaba-dependencies:${springCloudAlibabaVersion}" }
     }
+    
 }
 
 

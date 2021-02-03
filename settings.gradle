@@ -1,6 +1,6 @@
 rootProject.name = 'sc-demo'
 
-include 'register'
+include 'eureka-server'
 include 'gw-zuul'
 include 'gw-scgw'
 include 'commons'

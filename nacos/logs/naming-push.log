@@ -1,0 +1,54 @@
+2021-02-02 01:43:21,641 INFO DEFAULT_GROUP@@scgw is changed, add it to push queue.
+
+2021-02-02 01:43:21,644 INFO serviceName: DEFAULT_GROUP@@scgw changed, schedule push for: 192.168.8.100:60173, agent: Nacos-Java-Client:v1.2.1, key: 192.168.8.100,60173,290252253474482
+
+2021-02-02 01:43:21,644 INFO send udp packet: 192.168.8.100,60173,290252253474482
+
+2021-02-02 01:43:21,648 INFO received ack: {"type": "push-ack", "lastRefTime":"290252253474482", "data":""} from: 192.168.8.100:60173, cost: 4 ms, unacked: 0, total push: 1
+
+2021-02-02 03:44:34,542 INFO DEFAULT_GROUP@@scgw is changed, add it to push queue.
+
+2021-02-02 05:45:16,314 INFO DEFAULT_GROUP@@scgw is changed, add it to push queue.
+
+2021-02-02 05:45:16,315 INFO serviceName: DEFAULT_GROUP@@scgw changed, schedule push for: 192.168.8.100:60173, agent: Nacos-Java-Client:v1.2.1, key: 192.168.8.100,60173,290372413521303
+
+2021-02-02 05:45:16,315 INFO send udp packet: 192.168.8.100,60173,290372413521303
+
+2021-02-02 05:45:16,316 INFO received ack: {"type": "push-ack", "lastRefTime":"290372413521303", "data":""} from: 192.168.8.100:60173, cost: 1 ms, unacked: 0, total push: 2
+
+2021-02-02 07:46:14,067 INFO DEFAULT_GROUP@@scgw is changed, add it to push queue.
+
+2021-02-02 07:46:14,068 INFO serviceName: DEFAULT_GROUP@@scgw changed, schedule push for: 192.168.8.100:60173, agent: Nacos-Java-Client:v1.2.1, key: 192.168.8.100,60173,290422443957711
+
+2021-02-02 07:46:14,068 INFO send udp packet: 192.168.8.100,60173,290422443957711
+
+2021-02-02 07:46:14,070 INFO received ack: {"type": "push-ack", "lastRefTime":"290422443957711", "data":""} from: 192.168.8.100:60173, cost: 2 ms, unacked: 0, total push: 3
+
+2021-02-02 08:37:38,763 INFO DEFAULT_GROUP@@scgw is changed, add it to push queue.
+
+2021-02-02 08:37:40,238 INFO DEFAULT_GROUP@@scgw is changed, add it to push queue.
+
+2021-02-02 08:41:51,317 INFO DEFAULT_GROUP@@scgw is changed, add it to push queue.
+
+2021-02-02 08:47:31,059 INFO DEFAULT_GROUP@@scgw is changed, add it to push queue.
+
+2021-02-02 08:47:31,060 INFO serviceName: DEFAULT_GROUP@@scgw changed, schedule push for: 192.168.8.100:60173, agent: Nacos-Java-Client:v1.2.1, key: 192.168.8.100,60173,290633477081819
+
+2021-02-02 08:47:31,060 INFO send udp packet: 192.168.8.100,60173,290633477081819
+
+2021-02-02 08:47:31,062 INFO received ack: {"type": "push-ack", "lastRefTime":"290633477081819", "data":""} from: 192.168.8.100:60173, cost: 2 ms, unacked: 0, total push: 4
+
+2021-02-02 08:51:33,796 INFO DEFAULT_GROUP@@scgw is changed, add it to push queue.
+
+2021-02-02 08:51:33,797 INFO serviceName: DEFAULT_GROUP@@scgw changed, schedule push for: 192.168.8.100:60173, agent: Nacos-Java-Client:v1.2.1, key: 192.168.8.100,60173,290683517602226
+
+2021-02-02 08:51:33,797 INFO send udp packet: 192.168.8.100,60173,290683517602226
+
+2021-02-02 08:51:33,798 INFO received ack: {"type": "push-ack", "lastRefTime":"290683517602226", "data":""} from: 192.168.8.100:60173, cost: 1 ms, unacked: 0, total push: 5
+
+2021-02-02 09:00:50,640 INFO DEFAULT_GROUP@@scgw is changed, add it to push queue.
+
+2021-02-02 09:00:52,407 INFO DEFAULT_GROUP@@scgw is changed, add it to push queue.
+
+2021-02-02 09:06:17,324 INFO DEFAULT_GROUP@@scgw is changed, add it to push queue.
+
