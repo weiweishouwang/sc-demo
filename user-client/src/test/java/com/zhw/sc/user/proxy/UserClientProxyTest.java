@@ -8,7 +8,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
@@ -20,16 +19,16 @@ import java.util.concurrent.Future;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class UserClientProxyTest {
     @Autowired
-    private UserClientProxy demoClientProxy;
+    private UserClientProxy userClientProxy;
 
     @Test
     public void test01() {
-        Assert.assertTrue(demoClientProxy.getAdmin(1L).isSuccess());
+        Assert.assertTrue(userClientProxy.getAdmin(1L).isSuccess());
     }
 
-    @Test
+    /*@Test
     public void test02() throws ExecutionException, InterruptedException {
-        Future<Result<Admin>> future = demoClientProxy.getAdminAsync(1L);
+        Future<Result<Admin>> future = userClientProxy.getAdminAsync(1L);
         Assert.assertTrue(future.get().isSuccess());
-    }
+    }*/
 }

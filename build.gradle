@@ -4,7 +4,7 @@ buildscript {
         springCloudVersion = 'Hoxton.SR8'
         springCloudAlibabaVersion = '2.2.1.RELEASE'
         springBootManagementVersion = '1.0.11.RELEASE'
-
+        mysqlConnectorVersion = '5.1.47'
         mybatisPlusBootStarterVersion = '3.4.2'
         hutoolVersion = '5.5.7'
     }

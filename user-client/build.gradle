@@ -1,7 +1,7 @@
 
 dependencies {
     compile project(":user-contract")
-    compile project(":base-service-client")
+    compile project(":base-client")
 
     testCompile "org.springframework.boot:spring-boot-starter-test"
 }

@@ -1,0 +1,20 @@
+dependencies {
+
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-log4j2'
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+    testCompile "org.springframework.boot:spring-boot-starter-test"
+
+    //compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    compile 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
+    compile 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config'
+
+    //implementation 'org.springframework.cloud:spring-cloud-starter-loadbalancer'
+    //compile 'org.springframework.cloud:spring-cloud-starter-netflix-ribbon'
+
+    //compile 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
+    //compile 'com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel'
+
+    compile project(":common-contract")
+    compile project(":commons")
+}

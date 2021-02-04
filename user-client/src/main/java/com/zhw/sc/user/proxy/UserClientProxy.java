@@ -1,8 +1,5 @@
 package com.zhw.sc.user.proxy;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.netflix.hystrix.contrib.javanica.command.AsyncResult;
-import com.netflix.hystrix.exception.HystrixTimeoutException;
 import com.zhw.sc.base.client.proxy.BaseClientProxy;
 import com.zhw.sc.common.contract.bean.Result;
 import com.zhw.sc.user.api.UserAPI;
@@ -21,13 +18,13 @@ public class UserClientProxy extends BaseClientProxy implements UserAPI {
             .getLogger(UserClientProxy.class);
 
     @Autowired
-    private UserClient demoClient;
+    private UserClient userClient;
 
 
     @Override
-    @HystrixCommand(fallbackMethod = "getAdminFallback")
+    //@HystrixCommand(fallbackMethod = "getAdminFallback")
     public Result<Admin> getAdmin(Long id) {
-        return demoClient.getAdmin(id);
+        return userClient.getAdmin(id);
     }
 
     @Override
@@ -35,15 +32,15 @@ public class UserClientProxy extends BaseClientProxy implements UserAPI {
         return null;
     }
 
-    @HystrixCommand(fallbackMethod = "getAdminFallback")
+    /*@HystrixCommand(fallbackMethod = "getAdminFallback")
     public Future<Result<Admin>> getAdminAsync(Long id) {
         return new AsyncResult<Result<Admin>>() {
             @Override
             public Result<Admin> invoke() {
-                return demoClient.getAdmin(id);
+                return userClient.getAdmin(id);
             }
         };
-    }
+    }*/
 
     public Result<Admin> getAdminFallback(Long id, Throwable t) {
         return backFallback(t);

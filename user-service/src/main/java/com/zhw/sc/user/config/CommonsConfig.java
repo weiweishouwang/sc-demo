@@ -1,5 +1,6 @@
 package com.zhw.sc.user.config;
 
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
@@ -8,5 +9,6 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @ComponentScan({"com.zhw.sc.commons"})
+@RefreshScope
 public class CommonsConfig {
 }

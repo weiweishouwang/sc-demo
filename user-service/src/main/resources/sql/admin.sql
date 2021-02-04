@@ -29,4 +29,6 @@ CREATE TABLE `admin` (
   `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+insert into admin(id, account, passwd, name, version) values (1, 'admin', 'admin', 'zhw', 1);
+
 SET FOREIGN_KEY_CHECKS = 1;
