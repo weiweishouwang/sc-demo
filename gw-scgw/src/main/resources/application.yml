@@ -19,6 +19,10 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848
         enabled: true
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8080
 
 server:
   port: 9090
@@ -37,25 +41,9 @@ management:
         include: '*'
       base-path: /healthcheck
 
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://127.0.0.1:8761/eureka/
-    registry-fetch-interval-seconds: 5
-
 logging:
   config: classpath:log4j2.xml
 
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 120000
 
 ribbon:
   connectTimeout: 2000
