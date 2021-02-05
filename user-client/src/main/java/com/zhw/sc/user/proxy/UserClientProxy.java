@@ -1,5 +1,6 @@
 package com.zhw.sc.user.proxy;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.zhw.sc.base.client.proxy.BaseClientProxy;
 import com.zhw.sc.common.contract.bean.Result;
 import com.zhw.sc.user.api.UserAPI;
@@ -23,6 +24,7 @@ public class UserClientProxy extends BaseClientProxy implements UserAPI {
 
     @Override
     //@HystrixCommand(fallbackMethod = "getAdminFallback")
+    @SentinelResource(value = "getAdmin")
     public Result<Admin> getAdmin(Long id) {
         return userClient.getAdmin(id);
     }
