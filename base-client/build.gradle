@@ -4,6 +4,7 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-log4j2'
     compile 'org.springframework.boot:spring-boot-starter-actuator'
     compile 'org.springframework.cloud:spring-cloud-starter-openfeign'
+    //compile 'io.github.openfeign:feign-okhttp:10.10.1'
 
     //compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
     compile 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
@@ -14,6 +15,8 @@ dependencies {
 
     //compile 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
     compile 'com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel'
+
+    //compile "com.squareup.okhttp3:okhttp:${okhttp3Version}"
 
     compile project(":common-contract")
 }

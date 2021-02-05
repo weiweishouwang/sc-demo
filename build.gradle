@@ -7,6 +7,7 @@ buildscript {
         mysqlConnectorVersion = '5.1.47'
         mybatisPlusBootStarterVersion = '3.4.2'
         hutoolVersion = '5.5.7'
+        okhttp3Version = '4.9.0'
     }
 
     repositories {
