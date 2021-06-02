@@ -1,5 +1,7 @@
 package com.zhw.sc.user.client;
 
+import com.zhw.sc.common.contract.bean.Result;
+import com.zhw.sc.user.entity.Admin;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,6 +20,8 @@ public class UserClientTest {
 
     @Test
     public void test01() {
-        Assert.assertTrue(userClient.getAdmin(1L).isSuccess());
+        Result<Admin> result = userClient.getAdmin(1L);
+        System.out.println(result.getData().getName());
+        Assert.assertTrue(result.isSuccess());
     }
 }

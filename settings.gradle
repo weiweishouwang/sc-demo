@@ -10,4 +10,5 @@ include 'user-client'
 include 'common-contract'
 include 'base-client'
 include 'base-service'
+include 'user-demo'
 

@@ -35,7 +35,11 @@ public class UserRest implements UserAPI {
         result.setData(userService.getAdmin(id));
 
         logger.info(properties.getName());
-
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return result;
     }
 

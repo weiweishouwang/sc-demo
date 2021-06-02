@@ -1,21 +1,17 @@
-package com.zhw.sc.user;
+package com.zhw.sc.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-//import org.springframework.cloud.netflix.hystrix.EnableHystrix;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan({"com.zhw.sc.commons", "com.zhw.sc.user", "com.zhw.sc.demo"})
 @EnableDiscoveryClient
 @EnableFeignClients
-//@EnableHystrix
-public class UserClientApplication {
-
+public class DemoServiceApplication {
     public static void main(String[] args) {
-        SpringApplication.run(UserClientApplication.class, args);
+        SpringApplication.run(DemoServiceApplication.class, args);
     }
-
 }

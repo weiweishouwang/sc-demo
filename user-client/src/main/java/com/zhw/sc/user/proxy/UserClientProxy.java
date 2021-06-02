@@ -1,6 +1,7 @@
 package com.zhw.sc.user.proxy;
 
-import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.zhw.sc.base.client.proxy.BaseClientProxy;
 import com.zhw.sc.common.contract.bean.Result;
 import com.zhw.sc.user.api.UserAPI;
@@ -23,8 +24,21 @@ public class UserClientProxy extends BaseClientProxy implements UserAPI {
 
 
     @Override
-    //@HystrixCommand(fallbackMethod = "getAdminFallback")
-    @SentinelResource(value = "getAdmin")
+    @HystrixCommand(
+            commandKey = "com.zhw.sc.user.proxy.UserClientProxy.getAdmin",
+            fallbackMethod = "getAdminFallback",
+            commandProperties = {
+                    @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000"),
+                    @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "20"),
+                    @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "5"),
+                    @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "50"),
+                    @HystrixProperty(name = "metrics.rollingStats.timeInMilliseconds", value = "10000")
+            },
+            threadPoolProperties = {
+                    @HystrixProperty(name = "coreSize", value = "10"),
+                    @HystrixProperty(name = "maxQueueSize", value = "20"),
+                    @HystrixProperty(name = "queueSizeRejectionThreshold", value = "20")
+            })
     public Result<Admin> getAdmin(Long id) {
         return userClient.getAdmin(id);
     }

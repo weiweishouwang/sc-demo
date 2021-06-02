@@ -1,0 +1,10 @@
+plugins {
+    id 'org.springframework.boot'
+}
+
+dependencies {
+    compile project(":base-client")
+    compile project(":user-contract")
+    compile project(":user-client")
+    compile project(":base-service")
+}
